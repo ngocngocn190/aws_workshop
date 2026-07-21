@@ -25,7 +25,7 @@ Tính năng này cho thấy các dịch vụ bảo mật cloud đang dần xem A
 
 ...Hình ảnh...
 
-![AI Traffic Analysis Dashboard - AWS WAF](images/ai-traffic-analysis-dashboard.png)
+![AI Traffic Analysis Dashboard - AWS WAF](/images/i_blog1.png)
 
 Link bài viết gốc: <https://aws.amazon.com/blogs/security/introducing-ai-traffic-analysis-dashboards-for-aws-waf/>
 

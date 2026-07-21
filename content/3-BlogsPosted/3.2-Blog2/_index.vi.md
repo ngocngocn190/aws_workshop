@@ -25,7 +25,7 @@ Tính năng này cho thấy việc chống DDoS hiệu quả không chỉ dừng
 
 ...Hình ảnh...
 
-![AWS](images/i_blog2.png)
+![AWS](/images/i_blog2.png)
 
 Link bài viết gốc: <https://aws.amazon.com/vi/blogs/security/gain-visibility-into-ddos-attacks-with-flow-logs-in-aws-shield-advanced/>
 

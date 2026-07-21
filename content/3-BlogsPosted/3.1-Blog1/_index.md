@@ -31,7 +31,7 @@ This feature demonstrates that modern cloud security services are beginning to r
 
 ## Illustration
 
-![AI Traffic Analysis Dashboard - AWS WAF](images/ai-traffic-analysis-dashboard.png)
+![AI Traffic Analysis Dashboard - AWS WAF](/images/i_blog1.png)
 
 ## References
 
