@@ -1,31 +1,32 @@
 ---
 title: "Blog 2"
-date: 2024-01-01
-weight: 1
+date: 2026-06-06
+weight: 4
 chapter: false
-pre: " <b> 3.2. </b> "
+pre: " <b> 3.4. </b> "
 ---
 {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+# AWS SHIELD ADVANCED ATTACK FLOW LOGS TRONG VIỆC GIÁM SÁT TẤN CÔNG DDOS
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+AWS Shield Advanced vừa bổ sung tính năng Attack Flow Logs, cho phép ghi lại thông tin chi tiết về lưu lượng trong quá trình xảy ra tấn công DDoS. Đây là bước cải tiến giúp đội vận hành phân tích và điều tra sự cố dựa trên dữ liệu cụ thể, thay vì chỉ nhìn vào các chỉ số tổng quan như trước.
 
 Các điểm chính cần nắm:
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+* AWS Shield Advanced là dịch vụ bảo vệ DDoS nâng cao, hỗ trợ các tài nguyên như CloudFront, Elastic Load Balancing, Route 53, Global Accelerator và Elastic IP, có khả năng phát hiện và giảm thiểu tấn công ở tầng mạng và tầng vận chuyển.
+* Attack Flow Logs ghi nhận metadata của lưu lượng trong thời gian diễn ra tấn công, và có thể xuất dữ liệu sang Amazon S3, CloudWatch Logs hoặc Amazon Data Firehose để tích hợp với hệ thống giám sát hiện có.
+* Các trường dữ liệu được ghi nhận gồm: IP nguồn/đích, giao thức, số lượng packet/byte, quốc gia phát sinh lưu lượng, Edge Location tiếp nhận, và hành động mà Shield đã thực hiện với lưu lượng đó.
+* Lợi ích chính: phân tích chi tiết quy mô và loại lưu lượng tấn công, xác định nguồn gốc tấn công qua IP/quốc gia, và kiểm tra hiệu quả của cơ chế giảm thiểu thông qua trường "action".
+* Dữ liệu log có thể kết hợp với các công cụ phân tích như Amazon Athena, CloudWatch Logs Insights, hoặc các hệ thống SIEM như Splunk để phục vụ điều tra sâu hơn.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+Tính năng này cho thấy việc chống DDoS hiệu quả không chỉ dừng ở phát hiện và ngăn chặn, mà khả năng quan sát, phân tích lưu lượng sau sự cố cũng quan trọng không kém để đánh giá mức độ ảnh hưởng và cải thiện hệ thống bảo mật về sau.
 
 ...Hình ảnh...
 
-...Link...
+![AWS](images/i_blog2.png)
 
-...Hướng dẫn...
+Link bài viết gốc: <https://aws.amazon.com/vi/blogs/security/gain-visibility-into-ddos-attacks-with-flow-logs-in-aws-shield-advanced/>
+
+Link bài viết:<https://www.facebook.com/groups/660548818043427/user/100010448557887>

@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: 2025-05-21
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
@@ -12,27 +12,24 @@ pre: " <b> 1.1. </b> "
 
 ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Làm quen môi trường thực tập, kết nối với các bạn cùng chương trình First Cloud AI Journey (FCAJ).
+* Tìm hiểu dịch vụ AWS cơ bản, các yêu cầu trong quá trình thực tập.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Làm quen với các thành viên FCAJ và tìm kiếm những thành viên để lập thành một đội <br> - Đọc và lưu ý các nội quy, quy định tập                                                                                             | 21/05/2025   | 21/05/2025      |
+| 3   | - Tìm hiểu AWS và các loại dịch vụ <br> - Xác định những kiến thức cơ bản cần tìm hiểu trước                                            | 22/05/2025   | 22/05/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 23/05/2025   | 23/05/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 1:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Buổi đầu làm quen các bạn cùng nhóm FCAJ, trao đổi về mục tiêu và lịch trình học trong đợt thực tập
+
+* Khi đăng ký tài khoản , hệ thống báo lỗi không xác thực được thẻ ngân hàng dùng để verify tài khoản. Kiểm tra lại loại thẻ (cần thẻ Visa/Mastercard hỗ trợ thanh toán quốc tế), thử lại với thẻ khác và liên hệ ngân hàng để mở giao dịch quốc tế trước khi đăng ký lại, tài khoản tạo thành công sau đó
+
+* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản
 
 * Đã tạo và cấu hình AWS Free Tier account thành công.
 
@@ -48,12 +45,10 @@ pre: " <b> 1.1. </b> "
 
   * Kiểm tra thông tin tài khoản & cấu hình
   * Lấy danh sách region
-  * Xem dịch vụ EC2
   * Tạo và quản lý key pair
   * Kiểm tra thông tin dịch vụ đang chạy
   * ...
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+
 
 

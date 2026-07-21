@@ -1,59 +1,40 @@
 ---
 title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+date: 2025-06-08
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+⚠️ **Lưu ý:** Nội dung dưới đây là kế hoạch dự kiến, chỉ mang tính tham khảo, vui lòng **không sao chép nguyên văn** cho báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu Amazon RDS: cách triển khai cơ sở dữ liệu quan hệ được quản lý, kết nối với EC2, backup & restore.
+* Tìm hiểu Amazon CloudWatch: giám sát metrics, logs, thiết lập cảnh báo và dashboard cho tài nguyên AWS.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc                                                                                                                                                                                              | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                          |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ------------------------------------------------------------ |
+| 2   | - Tìm hiểu tổng quan Amazon RDS: khái niệm, các DB engine hỗ trợ, khi nào nên dùng RDS <br> - **Thực hành:** Chuẩn bị VPC, EC2 Security Group, RDS Security Group, DB Subnet Group                | 08/06/2025   | 08/06/2025       | <https://000005.awsstudygroup.com/vi/1-introduce/>          |
+| 3   | - **Thực hành:** Tạo EC2 instance <br> - **Thực hành:** Tạo RDS database instance                                                                                                                    | 09/06/2025    | 09/06/2025      | <https://000005.awsstudygroup.com/vi/3-create-ec2/>          |
+| 4   | - **Thực hành:** Triển khai ứng dụng kết nối EC2 với RDS <br> - **Thực hành:** Backup và restore RDS <br> - Dọn dẹp tài nguyên RDS đã tạo                                                            | 10/06/2025    | 10/06/2025       | <https://000005.awsstudygroup.com/vi/5-deploy-app/>          |
+| 5   | - Tìm hiểu tổng quan Amazon CloudWatch <br> - **Thực hành:** Các bước chuẩn bị <br> - Tìm hiểu CloudWatch Metric: xem metrics, search expression, math expression, dynamic labels                  | 11/06/2025    | 11/06/2025       | <https://000008.awsstudygroup.com/vi/3-cloud-watch-metric/>  |
+| 6   | - Tìm hiểu CloudWatch Logs: Logs, Logs Insights, Metric Filter                                                                                                                                        | 12/06/2025    | 12/06/2025       | <https://000008.awsstudygroup.com/vi/4-cloud-watch-logs/>    |
+| 7   | - Tìm hiểu CloudWatch Alarms và Dashboards <br> - Dọn dẹp toàn bộ tài nguyên CloudWatch đã tạo trong tuần                                                                                            | 13/06/2025    | 13/06/2025       | <https://000008.awsstudygroup.com/vi/5-cloud-watch-alarm/>   |
 
-### Kết quả đạt được tuần 4:
+### Kết quả dự kiến đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu Amazon RDS là gì, các DB engine được hỗ trợ (Aurora, MySQL, MariaDB, Oracle, SQL Server, PostgreSQL) và khi nào nên chọn RDS thay vì tự triển khai database trên EC2.
+* Tự chuẩn bị được hạ tầng mạng (VPC, Security Group, DB Subnet Group) cho một RDS instance.
+* Tạo được EC2 instance và RDS database instance, triển khai ứng dụng kết nối giữa hai thành phần này.
+* Biết cách thực hiện backup/restore cho RDS database.
+* Hiểu Amazon CloudWatch là gì và vai trò trong việc giám sát tài nguyên, ứng dụng trên AWS.
+* Biết cách xem và thao tác với CloudWatch Metrics: tìm kiếm, tính toán, tạo dynamic label.
+* Biết cách sử dụng CloudWatch Logs và Logs Insights để tra cứu, phân tích log; tạo Metric Filter từ log.
+* Thiết lập được CloudWatch Alarms để cảnh báo khi có bất thường, và dựng Dashboard để theo dõi trực quan.
+* Biết cách dọn dẹp tài nguyên sau khi thực hành để tránh phát sinh chi phí ngoài ý muốn.
+  

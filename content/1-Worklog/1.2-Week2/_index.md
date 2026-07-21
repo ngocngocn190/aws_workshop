@@ -1,11 +1,11 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
+date: 2025-05-25
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
+{{% notice warning %}}
 ⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
 {{% /notice %}}
 
@@ -16,42 +16,28 @@ pre: " <b> 1.2. </b> "
 * Understand basic AWS services, how to use the console & CLI.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task                                                                                                                                                                                                              | Start Date | Completion Date | Reference Material                                     |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | -------------------------------------------------------- |
+| 2   | - Learn the overview of Amazon VPC <br>&emsp; + Subnets <br>&emsp; + Route Table <br>&emsp; + Internet Gateway <br>&emsp; + NAT Gateway                                                                        | 05/25/2025 | 05/25/2025      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
+| 3   | - Learn about firewalls within a VPC <br>&emsp; + Security Group <br>&emsp; + Network ACLs <br>&emsp; + VPC Resource Map                                                                                       | 05/26/2025 | 05/26/2025      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
+| 4   | - **Practice:** Prepare the VPC environment <br>&emsp; + Create a VPC <br>&emsp; + Create a Subnet <br>&emsp; + Create an Internet Gateway <br>&emsp; + Create a Route Table <br>&emsp; + Create a Security Group <br>&emsp; + Enable VPC Flow Logs | 05/27/2025 | 05/27/2025      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
+| 5   | - **Practice:** Deploy Amazon EC2 within the VPC <br>&emsp; + Launch an EC2 instance <br>&emsp; + Verify connectivity <br>&emsp; + Create a NAT Gateway <br>&emsp; + Use Reachability Analyzer <br>&emsp; + Session Manager & CloudWatch Monitoring | 05/28/2025 | 05/28/2025      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
+| 6   | - **Practice:** Configure Site-to-Site VPN <br>&emsp; + Set up the VPN environment (separate VPC + EC2) <br>&emsp; + Create a Virtual Private Gateway <br>&emsp; + Create a Customer Gateway <br>&emsp; + Create the VPN connection <br>&emsp; + Configure the Customer Gateway & customize the VPN Tunnel | 05/29/2025 | 05/29/2025      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
 
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood the architecture and basic components of Amazon VPC: Subnet, Route Table, Internet Gateway, NAT Gateway.
 
-* Successfully created and configured an AWS Free Tier account.
+* Learned how to control network access using Security Groups and Network ACLs, and understood the differences between the two.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Built a complete VPC environment from scratch and enabled VPC Flow Logs to monitor traffic.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Successfully deployed an EC2 instance within the VPC, verified connectivity, and monitored it with CloudWatch.
 
-* Used AWS CLI to perform basic operations such as:
+* Established an AWS Site-to-Site VPN connection and understood the connection flow between the Customer Gateway and the Virtual Private Gateway.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Learned how to clean up resources after practicing to avoid unwanted costs.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+
+
