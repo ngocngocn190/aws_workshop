@@ -1,6 +1,6 @@
 ---
 title: "Week 1 Worklog"
-date: 2025-05-21
+date: 2026-05-21
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
@@ -18,9 +18,9 @@ pre: " <b> 1.1. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members and look for teammates to form a group <br> - Read and take note of the internship unit's rules and regulations                                  | 05/21/2025 | 05/21/2025      |                                            |
-| 3   | - Learn about AWS and its types of services <br> - Identify the basic knowledge that needs to be studied first                                                                       | 05/22/2025 | 05/22/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 05/23/2025 | 05/23/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Get acquainted with FCAJ members and look for teammates to form a group <br> - Read and take note of the internship unit's rules and regulations                                  | 05/21/2026 | 05/21/2026      |                                            |
+| 3   | - Learn about AWS and its types of services <br> - Identify the basic knowledge that needs to be studied first                                                                       | 05/22/2026 | 05/22/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 05/23/2026 | 05/23/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 1 Achievements:

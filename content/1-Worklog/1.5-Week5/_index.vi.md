@@ -1,59 +1,36 @@
 ---
 title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+date: 2026-06-15
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+⚠️ **Lưu ý:** Nội dung dưới đây là kế hoạch dự kiến, chỉ mang tính tham khảo, vui lòng **không sao chép nguyên văn** cho báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
 
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu AWS CLI: cài đặt, cấu hình, và cách thao tác với các dịch vụ AWS phổ biến (S3, SNS, IAM, VPC, EC2) qua command line.
+* Tìm hiểu Amazon DynamoDB: khái niệm cơ bản, cách thao tác dữ liệu qua Console, CloudShell và AWS SDK (Python).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc                                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                              |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ------------------------------------------------------------ |
+| 2   | - Tìm hiểu tổng quan AWS CLI, các bước chuẩn bị <br> - **Thực hành:** Cài đặt AWS CLI, cấu hình profile & access key                                                                             | 15/06/2026   | 15/06/2026      | <https://000011.awsstudygroup.com/1-introduce/>              |
+| 3   | - **Thực hành:** Xem thông tin tài nguyên qua CLI <br> - **Thực hành:** Thao tác với Amazon S3, Amazon SNS và IAM bằng AWS CLI                                                                  | 16/06/2026   | 16/06/2026      | <https://000011.awsstudygroup.com/4-infras/>                 |
+| 4   | - **Thực hành:** Tạo VPC & Internet Gateway bằng CLI <br> - **Thực hành:** Tạo EC2 instance bằng CLI <br> - Troubleshooting & dọn dẹp tài nguyên đã tạo                                        | 17/06/2026   | 17/06/2026      | <https://000011.awsstudygroup.com/8-network/>                |
+| 5   | - Tìm hiểu tổng quan Amazon DynamoDB: <br>&emsp; + Core components <br>&emsp; + Primary Key & Secondary Index <br>&emsp; + Naming rules & Data types <br>&emsp; + Read Consistency, Capacity Mode | 18/06/2026   | 18/06/2026      | <https://000060.awsstudygroup.com/1-introduce/>              |
+| 6   | - **Thực hành:** Thao tác DynamoDB qua Management Console <br>&emsp; + Tạo table, ghi/đọc/cập nhật/truy vấn dữ liệu <br>&emsp; + Tạo & truy vấn Global Secondary Index                          | 19/06/2026   | 19/06/2026      | <https://000060.awsstudygroup.com/2-prerequiste/>            |
+| 7   | - **Thực hành:** Thao tác DynamoDB bằng AWS SDK (Python) <br>&emsp; + Tạo table, CRUD dữ liệu, load sample data, query/scan <br> - Dọn dẹp toàn bộ tài nguyên đã tạo trong tuần                | 20/06/2026   | 20/06/2026      | <https://000060.awsstudygroup.com/3-gettingstartedwithawssdk/> |
 
-### Kết quả đạt được tuần 5:
+### Kết quả dự kiến đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu AWS CLI là gì, cách cài đặt và cấu hình (Access Key, Secret Key, Region, output format, profiles).
+* Tự tạo được VPC, Internet Gateway và EC2 instance bằng AWS CLI mà không cần dùng Console.
+* Hiểu Amazon DynamoDB là gì, nắm được các thành phần cốt lõi: Primary Key, Secondary Index, quy tắc đặt tên, kiểu dữ liệu, Read Consistency và Read/Write Capacity Mode.
+* Thực hành thành thạo các thao tác CRUD (tạo, đọc, ghi, cập nhật, truy vấn) trên DynamoDB qua cả Management Console và CloudShell.
+* Biết cách tạo và truy vấn Global Secondary Index để mở rộng khả năng truy vấn dữ liệu.
+* Biết cách dọn dẹp tài nguyên sau khi thực hành để tránh phát sinh chi phí ngoài ý muốn.

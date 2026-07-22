@@ -1,58 +1,36 @@
 ---
 title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+date: 2026-06-22
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+⚠️ **Lưu ý:** Nội dung dưới đây là kế hoạch dự kiến, chỉ mang tính tham khảo, vui lòng **không sao chép nguyên văn** cho báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu Grafana: công cụ trực quan hóa và phân tích mã nguồn mở, dùng để giám sát tài nguyên và ứng dụng.
+* Thực hành triển khai Grafana trên EC2 instance và cấu hình giám sát tài nguyên AWS.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc                                                                                                                                                                       | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                    |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ---------------------------------------------------------------------- |
+| 2   | - Tìm hiểu tổng quan về Grafana và vai trò trong giám sát hệ thống <br> - **Thực hành:** Chuẩn bị VPC & Subnet, tạo Security Group                                        | 22/06/2026   | 22/06/2026      | <https://000029.awsstudygroup.com/2-prerequiste/>                     |
+| 3   | - **Thực hành:** Khởi tạo EC2 instance <br> - **Thực hành:** Tạo IAM User, tạo IAM Role và gán Role cho EC2                                                                | 23/06/2026   | 23/06/2026      | <https://000029.awsstudygroup.com/2-prerequiste/2.4-createiamuser/>   |
+| 4   | - **Thực hành:** Cài đặt Grafana trên EC2 instance (Linux)                                                                                                                    | 24/06/2026   | 24/06/2026      | <https://000029.awsstudygroup.com/3-installgrafana/>                  |
+| 5   | - **Thực hành:** Cấu hình data source cho Grafana <br> - Tìm hiểu cách xây dựng dashboard giám sát tài nguyên AWS                                                          | 25/06/2026   | 25/06/2026      | <https://000029.awsstudygroup.com/4-monitoringwithgrafana/>           |
+| 6   | - **Thực hành:** Tiếp tục cấu hình panel, biểu đồ giám sát và thử nghiệm alert trên Grafana dashboard                                                                       | 26/06/2026   | 26/06/2026      | <https://000029.awsstudygroup.com/4-monitoringwithgrafana/>           |
+| 7   | - Rà soát lại toàn bộ quá trình triển khai <br> - Dọn dẹp tài nguyên (EC2, IAM User/Role, Security Group, VPC) đã tạo trong tuần                                            | 27/06/2026   | 27/06/2026      | <https://000029.awsstudygroup.com/5-cleanup/>                         |
 
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Kết quả dự kiến đạt được tuần 6:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu Grafana là gì và vai trò của nó trong việc trực quan hóa, phân tích và giám sát tài nguyên/ứng dụng.
+* Tự chuẩn bị được hạ tầng cần thiết (VPC, Subnet, Security Group) để triển khai Grafana trên AWS.
+* Tạo được EC2 instance, IAM User và IAM Role, biết cách gán Role phù hợp cho instance để Grafana có quyền truy vấn dữ liệu giám sát.
+* Cài đặt thành công Grafana trên EC2 instance chạy Linux.
+* Cấu hình được data source và xây dựng dashboard cơ bản để giám sát tài nguyên AWS bằng Grafana.
+* Biết cách dọn dẹp toàn bộ tài nguyên đã tạo sau khi thực hành để tránh phát sinh chi phí ngoài ý muốn.

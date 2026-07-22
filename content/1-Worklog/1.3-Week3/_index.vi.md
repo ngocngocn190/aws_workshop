@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 3"
-date: 2025-06-01
+date: 2026-06-01
 weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
@@ -20,12 +20,12 @@ pre: " <b> 1.3. </b> "
 
 | Thứ | Công việc                                                                                                                                                                                                       | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                              |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | -------------------------------------------------------------- |
-| 2   | - Tìm hiểu tổng quan Amazon EC2 <br> - **Thực hành:** Chuẩn bị VPC & Security Group cho Linux/Windows instance                                                                                              | 01/06/2025    | 01/06/2025      | <https://000004.awsstudygroup.com/vi/1-introduce/>            |
-| 3   | - **Thực hành:** Khởi tạo & kết nối Windows instance, Linux instance <br> - Tìm hiểu EC2 cơ bản: <br>&emsp; + Thay đổi cấu hình EC2 <br>&emsp; + Tạo EBS Snapshot <br>&emsp; + Tạo & khởi chạy Custom AMI | 02/06/2025    | 02/06/2025       | <https://000004.awsstudygroup.com/vi/3-launchwindowsinstance/> |
-| 4   | - **Thực hành:** Triển khai ứng dụng Node.js (AWS User Management) <br>&emsp; + Trên Linux: LAMP server, phpMyAdmin, Node.js <br>&emsp; + Trên Windows: XAMPP, Node.js <br> - Áp dụng IAM giới hạn quyền sử dụng tài nguyên (region, instance type, EBS...) | 03/06/2025    | 03/06/2025       | <https://000004.awsstudygroup.com/vi/6-awsfcjmanagement-linux/> |
-| 5   | - Tìm hiểu tổng quan Amazon S3 <br> - **Thực hành:** Tạo S3 bucket, tải dữ liệu lên <br> - Bật static website hosting                                                                                        | 04/06/2025    | 04/06/2025      | <https://000057.awsstudygroup.com/vi/1-introduce/>            |
-| 6   | - **Thực hành:** Cấu hình Block Public Access & public object <br> - Kiểm tra website tĩnh <br> - Tăng tốc website với Amazon CloudFront                                                                    | 05/06/2025    | 05/06/2025       | <https://000057.awsstudygroup.com/vi/7-cloudfront/>            |
-| 7   | - **Thực hành:** Bucket Versioning, di chuyển & sao chép object sang region khác <br> - Dọn dẹp toàn bộ tài nguyên EC2 & S3 đã tạo trong tuần                                                                | 06/06/2025    | 06/06/2025      | <https://000057.awsstudygroup.com/vi/8-versioning/>            |
+| 2   | - Tìm hiểu tổng quan Amazon EC2 <br> - **Thực hành:** Chuẩn bị VPC & Security Group cho Linux/Windows instance                                                                                              | 01/06/2026    | 01/06/2026      | <https://000004.awsstudygroup.com/vi/1-introduce/>            |
+| 3   | - **Thực hành:** Khởi tạo & kết nối Windows instance, Linux instance <br> - Tìm hiểu EC2 cơ bản: <br>&emsp; + Thay đổi cấu hình EC2 <br>&emsp; + Tạo EBS Snapshot <br>&emsp; + Tạo & khởi chạy Custom AMI | 02/06/2026    | 02/06/2026       | <https://000004.awsstudygroup.com/vi/3-launchwindowsinstance/> |
+| 4   | - **Thực hành:** Triển khai ứng dụng Node.js (AWS User Management) <br>&emsp; + Trên Linux: LAMP server, phpMyAdmin, Node.js <br>&emsp; + Trên Windows: XAMPP, Node.js <br> - Áp dụng IAM giới hạn quyền sử dụng tài nguyên (region, instance type, EBS...) | 03/06/2026    | 03/06/2026       | <https://000004.awsstudygroup.com/vi/6-awsfcjmanagement-linux/> |
+| 5   | - Tìm hiểu tổng quan Amazon S3 <br> - **Thực hành:** Tạo S3 bucket, tải dữ liệu lên <br> - Bật static website hosting                                                                                        | 04/06/2026    | 04/06/2026      | <https://000057.awsstudygroup.com/vi/1-introduce/>            |
+| 6   | - **Thực hành:** Cấu hình Block Public Access & public object <br> - Kiểm tra website tĩnh <br> - Tăng tốc website với Amazon CloudFront                                                                    | 05/06/2026    | 05/06/2026       | <https://000057.awsstudygroup.com/vi/7-cloudfront/>            |
+| 7   | - **Thực hành:** Bucket Versioning, di chuyển & sao chép object sang region khác <br> - Dọn dẹp toàn bộ tài nguyên EC2 & S3 đã tạo trong tuần                                                                | 06/06/2026    | 06/06/2026      | <https://000057.awsstudygroup.com/vi/8-versioning/>            |
 
 ### Kết quả dự kiến đạt được tuần 3:
 
