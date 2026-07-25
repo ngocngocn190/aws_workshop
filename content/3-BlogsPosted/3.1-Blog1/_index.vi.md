@@ -1,5 +1,5 @@
 ---
-title: "Blog 2"
+title: "Blog 1"
 date: 2026-06-05
 weight: 2
 chapter: false
@@ -25,7 +25,7 @@ Tính năng này cho thấy các dịch vụ bảo mật cloud đang dần xem A
 
 ...Hình ảnh...
 
-![AI Traffic Analysis Dashboard - AWS WAF](/images/i_blog1.png)
+![AI Traffic Analysis Dashboard - AWS WAF](/images/3-BlogsPosted/i_blog1.png)
 
 Link bài viết gốc: <https://aws.amazon.com/blogs/security/introducing-ai-traffic-analysis-dashboards-for-aws-waf/>
 

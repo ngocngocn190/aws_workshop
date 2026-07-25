@@ -1,5 +1,5 @@
 ---
-title: "Blog 2"
+title: "Blog 1"
 date: 2026-06-05
 weight: 2
 chapter: false
@@ -31,7 +31,7 @@ This feature demonstrates that modern cloud security services are beginning to r
 
 ## Illustration
 
-![AI Traffic Analysis Dashboard - AWS WAF](/images/i_blog1.png)
+![AI Traffic Analysis Dashboard - AWS WAF](/images/3-BlogsPosted/i_blog1.png)
 
 ## References
 

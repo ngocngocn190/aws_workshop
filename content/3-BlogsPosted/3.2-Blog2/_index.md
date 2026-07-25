@@ -31,7 +31,7 @@ This feature demonstrates that effective DDoS protection is not limited to detec
 
 ## Illustration
 
-![AWS](/images/i_blog2.png)
+![AWS](/images/3-BlogsPosted/i_blog2.png)
 
 ## References
 

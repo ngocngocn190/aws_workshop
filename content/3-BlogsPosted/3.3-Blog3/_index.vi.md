@@ -32,6 +32,12 @@ Bài viết kết luận rằng phần kiến trúc kỹ thuật (event-driven, 
 
 
 ...Link...
-Link bài viết gốc: <https://aws.amazon.com/.../modernizing-kyc-with-aws...>
-Link bài viết : <https://www.facebook.com/share/p/1LS3B6w8Jy/>
+
+Link bài viết gốc: 
+
+<https://aws.amazon.com/.../modernizing-kyc-with-aws...>
+
+Link bài viết : 
+
+<https://www.facebook.com/share/p/1LS3B6w8Jy/>
 
