@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 2"
-date: 2026-05-25
+date: 2026-05-18
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
@@ -18,11 +18,11 @@ pre: " <b> 1.2. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Tìm hiểu tổng quan Amazon VPC <br>&emsp; + Subnets <br>&emsp; + Route Table <br>&emsp; + Internet Gateway <br>&emsp; + NAT Gateway                                                                                            | 25/05/2026   | 25/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>  |
-| 3   | - Tìm hiểu tường lửa trong VPC <br>&emsp; + Security Group <br>&emsp; + Network ACLs <br>&emsp; + VPC Resource Map                                              | 26/05/2026   | 26/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>  |
-| 4   | - **Thực hành:** Chuẩn bị môi trường VPC <br>&emsp; + Tạo VPC <br>&emsp; + Tạo Subnet <br>&emsp; + Tạo Internet Gateway <br>&emsp; + Tạo Route Table <br>&emsp; + Tạo Security Group <br>&emsp; + Kích hoạt VPC Flow Logs | 27/05/2026   | 27/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/> |
-| 5   | - **Thực hành:** Triển khai Amazon EC2 trong VPC <br>&emsp; + Tạo máy chủ EC2 <br>&emsp; + Kiểm tra kết nối <br>&emsp; + Tạo NAT Gateway <br>&emsp; + Sử dụng Reachability Analyzer <br>&emsp; + Session Manager & CloudWatch Monitoring               | 28/05/2026   | 28/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>  |
-| 6   | - **Thực hành:** Cấu hình Site-to-Site VPN <br>&emsp; + Tạo môi trường VPN (VPC + EC2 riêng) <br>&emsp; + Tạo Virtual Private Gateway <br>&emsp; + Tạo Customer Gateway <br>&emsp; + Tạo kết nối VPN <br>&emsp; + Cấu hình Customer Gateway & tùy chỉnh VPN Tunnel                                                                                       | 29/05/2026   | 29/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>  |
+| 2   | - Tìm hiểu tổng quan Amazon VPC <br>&emsp; + Subnets <br>&emsp; + Route Table <br>&emsp; + Internet Gateway <br>&emsp; + NAT Gateway                                                                                            | 18/05/2026   | 18/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>  |
+| 3   | - Tìm hiểu tường lửa trong VPC <br>&emsp; + Security Group <br>&emsp; + Network ACLs <br>&emsp; + VPC Resource Map                                              | 19/05/2026   | 19/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>  |
+| 4   | - **Thực hành:** Chuẩn bị môi trường VPC <br>&emsp; + Tạo VPC <br>&emsp; + Tạo Subnet <br>&emsp; + Tạo Internet Gateway <br>&emsp; + Tạo Route Table <br>&emsp; + Tạo Security Group <br>&emsp; + Kích hoạt VPC Flow Logs | 20/05/2026   | 20/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/> |
+| 5   | - **Thực hành:** Triển khai Amazon EC2 trong VPC <br>&emsp; + Tạo máy chủ EC2 <br>&emsp; + Kiểm tra kết nối <br>&emsp; + Tạo NAT Gateway <br>&emsp; + Sử dụng Reachability Analyzer <br>&emsp; + Session Manager & CloudWatch Monitoring               | 21/05/2026   | 21/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>  |
+| 6   | - **Thực hành:** Cấu hình Site-to-Site VPN <br>&emsp; + Tạo môi trường VPN (VPC + EC2 riêng) <br>&emsp; + Tạo Virtual Private Gateway <br>&emsp; + Tạo Customer Gateway <br>&emsp; + Tạo kết nối VPN <br>&emsp; + Cấu hình Customer Gateway & tùy chỉnh VPN Tunnel                                                                                       | 22/05/2026   | 22/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>  |
 
 
 ### Kết quả đạt được tuần 2:

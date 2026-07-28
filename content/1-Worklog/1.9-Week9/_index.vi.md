@@ -1,59 +1,36 @@
 ---
 title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
+date: 2026-07-06
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+⚠️ **Lưu ý:** Nội dung dưới đây là kế hoạch dự kiến, chỉ mang tính tham khảo, vui lòng **không sao chép nguyên văn** cho báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện việc phân chia công việc và chuẩn bị nền tảng (Foundation) cho dự án AI AWS Advisor.
+* Tìm hiểu Amazon Bedrock cơ bản: khái niệm, cách hoạt động và cách gọi model để phục vụ tính năng AI Copilot của dự án.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc                                                                                                                                  | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------ | --------------- | -------------------------------- |
+| 2   | - Phân chia công việc trong nhóm theo từng vai trò (Backend API, Resource Collector, AI Integration, Frontend, DevOps & Docs)              | 06/07/2026   | 06/07/2026      |      |
+| 3   | - **Thực hành:** Tạo AWS Account sandbox, setup IAM User cho nhóm <br> - Tạo GitHub repo, thiết lập branch strategy (main, dev, feature/*) | 07/07/2026   | 07/07/2026      |      |
+| 4   | - Tìm hiểu tổng quan Amazon Bedrock: foundation model là gì, các nhà cung cấp model (Anthropic, Meta, Amazon...)                          | 08/07/2026   | 08/07/2026      |      |
+| 5   | - **Thực hành:** Enable Amazon Bedrock trong AWS Console (request access model) <br> - Gọi thử model Claude 3 Haiku/Sonnet qua Bedrock    | 09/07/2026   | 09/07/2026      |      |
+| 6   | - Tìm hiểu cách viết prompt cơ bản cho Bedrock: prompt cho Security Analysis, Cost Recommendation, Performance Insight                     | 10/07/2026   | 10/07/2026      |      |
+| 7   | - Chốt DynamoDB Schema và API Contract cho dự án (không thay đổi sau mốc này để tránh ảnh hưởng tiến độ nhóm)                              | 11/07/2026   | 11/07/2026      |      |
 
-### Kết quả đạt được tuần 9:
+### Kết quả dự kiến đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Có bảng phân chia công việc rõ ràng cho từng thành viên trong nhóm.
+* Chuẩn bị xong nền tảng ban đầu: AWS sandbox account, IAM User, GitHub repo với chiến lược branch rõ ràng.
+* Hiểu Amazon Bedrock là gì, vai trò của nó trong việc cung cấp mô hình AI được quản lý (managed AI service) mà không cần tự host model.
+* Tự enable được Amazon Bedrock và gọi thử thành công model Claude qua Bedrock.
+* Biết cách viết prompt cơ bản để yêu cầu AI phân tích bảo mật, chi phí hoặc hiệu năng.
+* Chốt được DynamoDB Schema và API Contract, làm nền tảng ổn định để cả nhóm cùng triển khai song song ở các tuần sau.

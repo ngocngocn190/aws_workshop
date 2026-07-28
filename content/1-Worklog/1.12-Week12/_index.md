@@ -1,57 +1,37 @@
 ---
 title: "Week 12 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-07-27
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+
+{{% notice warning %}}
+⚠️ **Note:** The content below is a proposed study plan for reference only. Please **do not copy it verbatim** into your report, including this warning message.
 {{% /notice %}}
 
+### Week 12 Objectives
 
-### Week 12 Objectives:
+* Perform comprehensive testing of the **AI AWS Advisor** project and complete the remaining project documentation.
+* Clean up all AWS resources used throughout the project and prepare the final presentation and demonstration.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks for This Week
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference |
+| --- | --- | --- | --- | --- |
+| Mon | - **Hands-on:** Execute key test cases (create a project, trigger resource synchronization, detect public S3 buckets, identify IAM users/roles with `AdministratorAccess`, etc.) | 27/07/2026 | 27/07/2026 | |
+| Tue | - **Hands-on:** Review Collector Lambda and API Lambda logs using Amazon CloudWatch <br> - Write `docs/06-reflection.md` | 28/07/2026 | 28/07/2026 | |
+| Wed | - **Hands-on:** Deploy the complete end-to-end application and verify that the dashboard displays real data from AWS | 29/07/2026 | 29/07/2026 | |
+| Thu | - Review the project's security posture: verify IAM roles follow the principle of least privilege, ensure no access keys are hardcoded, and review audit logs in Amazon CloudWatch | 30/07/2026 | 30/07/2026 | |
+| Fri | - Prepare the final project demonstration and presentation for the **AI AWS Advisor** project | 31/07/2026 | 31/07/2026 | |
+| Sat | - **Hands-on:** Write `docs/05-cleanup.md` <br> - Clean up all AWS resources created during the project (AWS SAM stacks, DynamoDB tables, Amazon SNS topics, Amazon S3 buckets, CloudWatch Log Groups, etc.) | 01/08/2026 | 01/08/2026 | |
 
+### Expected Outcomes
 
-### Week 12 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
+* Successfully pass all critical test cases, confirming that the system functions as designed.
+* Gain the ability to use Amazon CloudWatch logs for debugging and troubleshooting, and complete a reflection document summarizing the project experience.
+* Deploy a fully functional end-to-end version of the application, with the dashboard displaying real data from the AWS sandbox environment.
+* Verify that the system follows essential AWS security best practices, including the principle of least privilege, avoiding hardcoded access keys, and maintaining an audit trail.
+* Complete all materials required for the final project demonstration and presentation.
+* Successfully clean up all AWS resources used throughout the project to prevent unnecessary charges after project completion.
 * ...

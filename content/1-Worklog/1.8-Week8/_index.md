@@ -1,57 +1,36 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-29
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+
+{{% notice warning %}}
+⚠️ **Note:** The content below is a proposed study plan for reference only. Please **do not copy it verbatim** into your report, including this warning message.
 {{% /notice %}}
 
+### Week 8 Objectives
 
-### Week 8 Objectives:
+* Explore and brainstorm ideas for the team project **"AI AWS Advisor" (Cloud Operations Copilot)**—an intelligent AWS infrastructure management platform powered by AI-driven analysis.
+* Gain a clear understanding of the problem to be solved, target users, key features, and overall system architecture before starting development.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks for This Week
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference |
+| --- | --- | --- | --- | --- |
+| Mon | - Read the project overview documentation <br> - Identify the core problem to solve (manual AWS infrastructure management is time-consuming and makes risk detection difficult) | 29/06/2026 | 29/06/2026 | |
+| Tue | - Research the target users (Cloud Engineers, DevOps Engineers, Solution Architects, System Administrators, and Technical Managers) <br> - Summarize the key features required for the platform | 30/06/2026 | 30/06/2026 | |
+| Wed | - Study the overall system architecture, including the data flow from **Resource Collectors → DynamoDB → AI Analysis → Dashboard** | 01/07/2026 | 01/07/2026 | |
+| Thu | - Explore the technologies used in the project: Backend (AWS Lambda, boto3, AWS SAM), Frontend (React, Tailwind CSS), and Infrastructure as Code (IaC) | 02/07/2026 | 02/07/2026 | |
+| Fri | - Review the project directory structure and the database schema (four DynamoDB tables: **projects**, **resources**, **insights**, and **alerts**) | 03/07/2026 | 03/07/2026 | |
+| Sat | - Study the API contracts (Projects, Resources, Insights, Chat, Alerts) <br> - Consolidate project ideas and prepare proposals for the team discussion | 04/07/2026 | 04/07/2026 | |
 
+### Expected Outcomes
 
-### Week 8 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Clearly understand the problem that **AI AWS Advisor** aims to solve: reducing the time required to manually monitor AWS infrastructure across multiple AWS Console pages.
+* Understand the primary user groups and their respective needs.
+* Gain a comprehensive understanding of the system architecture, from automated resource collection and data storage to AI-powered analysis and dashboard visualization.
+* Become familiar with the technologies planned for the backend, frontend, and infrastructure (Infrastructure as Code).
+* Understand the project's directory structure and the initial database schema design.
+* Understand the planned API contracts, providing a solid foundation for implementation in the following weeks.

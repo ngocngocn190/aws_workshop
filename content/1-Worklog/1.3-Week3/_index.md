@@ -1,6 +1,6 @@
 ---
 title: "Week 3 Worklog"
-date: 2026-06-01
+date: 2026-05-25
 weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
@@ -20,12 +20,12 @@ pre: " <b> 1.3. </b> "
 
 | Day | Task                                                                                                                                                                                                                | Start Date | Completion Date | Reference Material                                              |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ------------------------------------------------------------------ |
-| 2   | - Learn the overview of Amazon EC2 <br> - **Practice:** Prepare the VPC & Security Group for Linux/Windows instances                                                                                            | 06/01/2026 | 06/01/2026      | <https://000004.awsstudygroup.com/vi/1-introduce/>                |
-| 3   | - **Practice:** Launch & connect to a Windows instance and a Linux instance <br> - Learn basic EC2: <br>&emsp; + Change EC2 configuration <br>&emsp; + Create an EBS Snapshot <br>&emsp; + Create & launch a Custom AMI | 06/02/2026 | 06/02/2026      | <https://000004.awsstudygroup.com/vi/3-launchwindowsinstance/>    |
-| 4   | - **Practice:** Deploy a Node.js application (AWS User Management) <br>&emsp; + On Linux: LAMP server, phpMyAdmin, Node.js <br>&emsp; + On Windows: XAMPP, Node.js <br> - Apply IAM to restrict resource usage permissions (region, instance type, EBS...) | 06/03/2026 | 06/03/2026      | <https://000004.awsstudygroup.com/vi/6-awsfcjmanagement-linux/>   |
-| 5   | - Learn the overview of Amazon S3 <br> - **Practice:** Create an S3 bucket, upload data <br> - Enable static website hosting                                                                                    | 06/04/2026 | 06/04/2026      | <https://000057.awsstudygroup.com/vi/1-introduce/>                |
-| 6   | - **Practice:** Configure Block Public Access & public objects <br> - Test the static website <br> - Accelerate the website with Amazon CloudFront                                                             | 06/05/2026 | 06/05/2026      | <https://000057.awsstudygroup.com/vi/7-cloudfront/>                |
-| 7   | - **Practice:** Bucket Versioning, move & copy objects to another region <br> - Clean up all EC2 & S3 resources created this week                                                                              | 06/06/2026 | 06/06/2026      | <https://000057.awsstudygroup.com/vi/8-versioning/>                |
+| 2   | - Learn the overview of Amazon EC2 <br> - **Practice:** Prepare the VPC & Security Group for Linux/Windows instances                                                                                            | 25/05/2026 | 25/05/2026      | <https://000004.awsstudygroup.com/vi/1-introduce/>                |
+| 3   | - **Practice:** Launch & connect to a Windows instance and a Linux instance <br> - Learn basic EC2: <br>&emsp; + Change EC2 configuration <br>&emsp; + Create an EBS Snapshot <br>&emsp; + Create & launch a Custom AMI | 26/05/2026 | 26/05/2026      | <https://000004.awsstudygroup.com/vi/3-launchwindowsinstance/>    |
+| 4   | - **Practice:** Deploy a Node.js application (AWS User Management) <br>&emsp; + On Linux: LAMP server, phpMyAdmin, Node.js <br>&emsp; + On Windows: XAMPP, Node.js <br> - Apply IAM to restrict resource usage permissions (region, instance type, EBS...) | 27/05/2026 | 27/05/2026      | <https://000004.awsstudygroup.com/vi/6-awsfcjmanagement-linux/>   |
+| 5   | - Learn the overview of Amazon S3 <br> - **Practice:** Create an S3 bucket, upload data <br> - Enable static website hosting                                                                                    | 28/05/2026 | 28/05/2026      | <https://000057.awsstudygroup.com/vi/1-introduce/>                |
+| 6   | - **Practice:** Configure Block Public Access & public objects <br> - Test the static website <br> - Accelerate the website with Amazon CloudFront                                                             | 29/05/2026 | 29/05/2026      | <https://000057.awsstudygroup.com/vi/7-cloudfront/>                |
+| 7   | - **Practice:** Bucket Versioning, move & copy objects to another region <br> - Clean up all EC2 & S3 resources created this week                                                                              | 30/05/2026 | 30/05/2026      | <https://000057.awsstudygroup.com/vi/8-versioning/>                |
 
 ### Week 3 Expected Achievements:
 

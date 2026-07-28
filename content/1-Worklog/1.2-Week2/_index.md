@@ -1,6 +1,6 @@
 ---
 title: "Week 2 Worklog"
-date: 2026-05-25
+date: 2026-05-18
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
@@ -18,11 +18,11 @@ pre: " <b> 1.2. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                              | Start Date | Completion Date | Reference Material                                     |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | -------------------------------------------------------- |
-| 2   | - Learn the overview of Amazon VPC <br>&emsp; + Subnets <br>&emsp; + Route Table <br>&emsp; + Internet Gateway <br>&emsp; + NAT Gateway                                                                        | 05/25/2026 | 05/25/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
-| 3   | - Learn about firewalls within a VPC <br>&emsp; + Security Group <br>&emsp; + Network ACLs <br>&emsp; + VPC Resource Map                                                                                       | 05/26/2026 | 05/26/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
-| 4   | - **Practice:** Prepare the VPC environment <br>&emsp; + Create a VPC <br>&emsp; + Create a Subnet <br>&emsp; + Create an Internet Gateway <br>&emsp; + Create a Route Table <br>&emsp; + Create a Security Group <br>&emsp; + Enable VPC Flow Logs | 05/27/2026 | 05/27/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
-| 5   | - **Practice:** Deploy Amazon EC2 within the VPC <br>&emsp; + Launch an EC2 instance <br>&emsp; + Verify connectivity <br>&emsp; + Create a NAT Gateway <br>&emsp; + Use Reachability Analyzer <br>&emsp; + Session Manager & CloudWatch Monitoring | 05/28/2026 | 05/28/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
-| 6   | - **Practice:** Configure Site-to-Site VPN <br>&emsp; + Set up the VPN environment (separate VPC + EC2) <br>&emsp; + Create a Virtual Private Gateway <br>&emsp; + Create a Customer Gateway <br>&emsp; + Create the VPN connection <br>&emsp; + Configure the Customer Gateway & customize the VPN Tunnel | 05/29/2026 | 05/29/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
+| 2   | - Learn the overview of Amazon VPC <br>&emsp; + Subnets <br>&emsp; + Route Table <br>&emsp; + Internet Gateway <br>&emsp; + NAT Gateway                                                                        | 18/05/2026 | 18/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
+| 3   | - Learn about firewalls within a VPC <br>&emsp; + Security Group <br>&emsp; + Network ACLs <br>&emsp; + VPC Resource Map                                                                                       | 19/05/2026 | 19/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
+| 4   | - **Practice:** Prepare the VPC environment <br>&emsp; + Create a VPC <br>&emsp; + Create a Subnet <br>&emsp; + Create an Internet Gateway <br>&emsp; + Create a Route Table <br>&emsp; + Create a Security Group <br>&emsp; + Enable VPC Flow Logs | 20/05/2026 | 20/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
+| 5   | - **Practice:** Deploy Amazon EC2 within the VPC <br>&emsp; + Launch an EC2 instance <br>&emsp; + Verify connectivity <br>&emsp; + Create a NAT Gateway <br>&emsp; + Use Reachability Analyzer <br>&emsp; + Session Manager & CloudWatch Monitoring | 21/05/2026 | 21/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
+| 6   | - **Practice:** Configure Site-to-Site VPN <br>&emsp; + Set up the VPN environment (separate VPC + EC2) <br>&emsp; + Create a Virtual Private Gateway <br>&emsp; + Create a Customer Gateway <br>&emsp; + Create the VPN connection <br>&emsp; + Configure the Customer Gateway & customize the VPN Tunnel | 22/05/2026 | 22/05/2026      | <https://000003.awsstudygroup.com/vi/3-prerequisite/>    |
 
 
 ### Week 2 Achievements:

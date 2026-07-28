@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 1"
-date: 2026-05-21
+date: 2026-05-11
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
@@ -18,9 +18,9 @@ pre: " <b> 1.1. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ và tìm kiếm những thành viên để lập thành một đội <br> - Đọc và lưu ý các nội quy, quy định tập                                                                                             | 21/06/2026   | 21/06/2026      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br> - Xác định những kiến thức cơ bản cần tìm hiểu trước                                            | 22/05/2026   | 22/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 23/05/2026   | 23/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Làm quen với các thành viên FCAJ và tìm kiếm những thành viên để lập thành một đội <br> - Đọc và lưu ý các nội quy, quy định tập                                                                                             | 11/05/2026   | 11/05/2026      |
+| 3   | - Tìm hiểu AWS và các loại dịch vụ <br> - Xác định những kiến thức cơ bản cần tìm hiểu trước                                            | 12/05/2026   | 12/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/05/2026   | 13/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 1:

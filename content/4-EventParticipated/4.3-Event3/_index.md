@@ -85,4 +85,4 @@ pre: " <b> 4.3. </b> "
 
 #### Event Photos
 
-* Add your event photos here.
+![Event](/images/4-EventParticipated/i_event3.png)

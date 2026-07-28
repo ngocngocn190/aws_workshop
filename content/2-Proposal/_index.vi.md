@@ -1,6 +1,6 @@
 ---
 title: "Bản đề xuất"
-date: 2024-01-01
+date: 2026-06-01
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
@@ -26,9 +26,10 @@ AI AWS Advisor tự động thu thập dữ liệu qua các Resource Collector L
 
 
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  CHƯA LÀM LẠI
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
-
+#### Hiệu quả Kinh tế & Tối ưu (ROI)
+- **Tiết kiệm Thời gian:** Giảm hơn 90% thời gian kiểm toán thủ công (từ nhiều ngày xuống còn vài phút).
+- **Tối ưu Chi phí:** Phát hiện từ 15% đến 35% chi phí lãng phí hàng tháng cho khách hàng.
+- **Chi phí duy trì nhàn rỗi (Idle Cost):** Hệ thống sử dụng kiến trúc Serverless theo mô hình pay-per-use, vì vậy khi không có yêu cầu xử lý, chi phí vận hành gần như bằng **0 USD/tháng**.
 
 
 ### 3. Kiến trúc giải pháp  
@@ -47,25 +48,15 @@ Nền tảng áp dụng kiến trúc AWS Serverless. React Dashboard (frontend) 
 - *Amazon SNS*: Đơn giản, managed, dễ tích hợp với Lambda.
 - *Amazon CloudWatch*: Giám sát gốc của AWS, không cần setup thêm hạ tầng, lưu log tự động. 
 
-*Thiết kế thành phần*  CHƯA LÀM LẠI
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+ 
 
 ### 4. Triển khai kỹ thuật  CHƯA LÀM LẠI
 *Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+#### Các Giai đoạn Thực hiện
+1. **Giai đoạn 1: Bảo mật & Thiết kế Kiến trúc:** Thiết lập Trust Policy IAM Cross-Account, cấu hình template IaC với AWS SAM CLI và thiết kế Single-Table schema DynamoDB (`PROJECTS`, `RESOURCES`, `INSIGHTS`, `ALERTS`).
+2. **Giai đoạn 2: Phát triển Scanner & Tích hợp Bedrock:** Lập trình bộ thu thập cấu hình bằng `boto3`, viết Prompt Engineering cho Claude 3 trên Bedrock và xây dựng bộ kiểm thử Pytest/Moto.
+3. **Giai đoạn 3: Phát triển Dashboard & AI Chatbot:** Xây dựng giao diện React 18 với Vite, Tailwind CSS và Recharts; tích hợp AI Chatbot Copilot; kiểm thử toàn diện và đóng gói CloudFormation deployment.
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
 
 ### 5. Lộ trình & Mốc triển khai  
 - *Phase 0 – Foundation (Tuần 1)*: Tạo AWS Account sandbox, setup IAM User cho team, tạo GitHub repo, chốt DynamoDB schema và API contract, chuẩn bị môi trường local, enable Amazon Bedrock trên AWS Console.
@@ -78,33 +69,38 @@ Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/e
 Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
 
 *Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+Chi phí ước tính hàng tháng trên 10 dự án khách hàng quét 1,000 tài nguyên AWS mỗi ngày:
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+| Dịch vụ AWS | Mức độ Sử dụng | Chi phí Ước tính / Tháng |
+| :--- | :--- | :--- |
+| **AWS Lambda** | 100,000 requests, 512 MB memory | $0.00 (Free Tier) |
+| **Amazon API Gateway** | 50,000 REST requests | $0.05 |
+| **Amazon DynamoDB** | On-Demand (2 GB storage, 500k reads/writes) | $0.25 |
+| **Amazon Bedrock** | Claude 3 Haiku (1M Input tokens, 200k Output tokens) | $1.20 |
+| **Amazon EventBridge & SNS** | 720 triggers/tháng, 100 emails | $0.01 |
+| **Tổng Chi phí Ước tính Tháng** | **Serverless Pay-Per-Use** | **~$1.51 / tháng** |
 
-### 7. Đánh giá rủi ro  CHƯA LÀM LẠI
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+*Tổng Chi phí Hạ tầng Hàng năm:* **~$18.12 USD / năm**.
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+---
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
 
-### 8. Kết quả kỳ vọng  CHƯA LÀM LẠI
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+
+### 7. Đánh giá Rủi ro & Giải pháp Giảm thiểu
+
+| Rủi ro phát hiện | Mức độ | Khả năng xảy ra | Giải pháp giảm thiểu |
+| :--- | :--- | :--- | :--- |
+| **Giới hạn Rate Limit của Amazon Bedrock API** | Trung bình | Thấp | Cấu hình cơ chế **retry theo exponential backoff** và lưu cache kết quả trên DynamoDB để giảm số lần gọi API. |
+| **Khách hàng thu hồi quyền IAM Role** | Cao | Trung bình | Bắt ngoại lệ `ClientError` khi thực hiện `sts:AssumeRole` và tự động cập nhật trạng thái của project thành **Disconnected**. |
+| **LLM tạo ra kết quả không chính xác (Hallucination)** | Cao | Thấp | Yêu cầu mô hình trả về dữ liệu theo **JSON schema** cố định và sử dụng **regex fallback parser** trong Python để kiểm tra, xử lý khi kết quả không đúng định dạng. |
+| **Vượt ngân sách sử dụng AWS** | Trung bình | Thấp | Thiết lập **AWS Budgets** để gửi cảnh báo khi chi phí đạt **5 USD/tháng** và giới hạn tần suất chạy của các tác vụ theo lịch (cron jobs). |
+
+---
+
+### 8. Kết quả Kỳ vọng
+
+1. **Tự động hóa quy trình kiểm toán:** Xây dựng hệ thống AI có khả năng tự động kiểm tra và đánh giá tài nguyên AWS theo chu kỳ mỗi giờ, giảm sự phụ thuộc vào việc rà soát thủ công.
+
+2. **Đảm bảo an toàn thông tin:** Hạn chế rủi ro lộ thông tin xác thực (credentials) bằng cách sử dụng **session token ngắn hạn** thông qua cơ chế `sts:AssumeRole`.
+
+3. **Mô hình tham khảo cho doanh nghiệp:** Xây dựng một kiến trúc mẫu (blueprint) có thể tái sử dụng để phát triển các ứng dụng **B2B SaaS** dựa trên kiến trúc **Serverless** của AWS.

@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 6"
-date: 2026-06-22
+date: 2026-06-15
 weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
@@ -19,12 +19,12 @@ pre: " <b> 1.6. </b> "
 
 | Thứ | Công việc                                                                                                                                                                       | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                    |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ---------------------------------------------------------------------- |
-| 2   | - Tìm hiểu tổng quan về Grafana và vai trò trong giám sát hệ thống <br> - **Thực hành:** Chuẩn bị VPC & Subnet, tạo Security Group                                        | 22/06/2026   | 22/06/2026      | <https://000029.awsstudygroup.com/2-prerequiste/>                     |
-| 3   | - **Thực hành:** Khởi tạo EC2 instance <br> - **Thực hành:** Tạo IAM User, tạo IAM Role và gán Role cho EC2                                                                | 23/06/2026   | 23/06/2026      | <https://000029.awsstudygroup.com/2-prerequiste/2.4-createiamuser/>   |
-| 4   | - **Thực hành:** Cài đặt Grafana trên EC2 instance (Linux)                                                                                                                    | 24/06/2026   | 24/06/2026      | <https://000029.awsstudygroup.com/3-installgrafana/>                  |
-| 5   | - **Thực hành:** Cấu hình data source cho Grafana <br> - Tìm hiểu cách xây dựng dashboard giám sát tài nguyên AWS                                                          | 25/06/2026   | 25/06/2026      | <https://000029.awsstudygroup.com/4-monitoringwithgrafana/>           |
-| 6   | - **Thực hành:** Tiếp tục cấu hình panel, biểu đồ giám sát và thử nghiệm alert trên Grafana dashboard                                                                       | 26/06/2026   | 26/06/2026      | <https://000029.awsstudygroup.com/4-monitoringwithgrafana/>           |
-| 7   | - Rà soát lại toàn bộ quá trình triển khai <br> - Dọn dẹp tài nguyên (EC2, IAM User/Role, Security Group, VPC) đã tạo trong tuần                                            | 27/06/2026   | 27/06/2026      | <https://000029.awsstudygroup.com/5-cleanup/>                         |
+| 2   | - Tìm hiểu tổng quan về Grafana và vai trò trong giám sát hệ thống <br> - **Thực hành:** Chuẩn bị VPC & Subnet, tạo Security Group                                        | 15/06/2026   | 15/06/2026      | <https://000029.awsstudygroup.com/2-prerequiste/>                     |
+| 3   | - **Thực hành:** Khởi tạo EC2 instance <br> - **Thực hành:** Tạo IAM User, tạo IAM Role và gán Role cho EC2                                                                | 16/06/2026   | 16/06/2026      | <https://000029.awsstudygroup.com/2-prerequiste/2.4-createiamuser/>   |
+| 4   | - **Thực hành:** Cài đặt Grafana trên EC2 instance (Linux)                                                                                                                    | 17/06/2026   | 17/06/2026      | <https://000029.awsstudygroup.com/3-installgrafana/>                  |
+| 5   | - **Thực hành:** Cấu hình data source cho Grafana <br> - Tìm hiểu cách xây dựng dashboard giám sát tài nguyên AWS                                                          | 18/06/2026   | 18/06/2026      | <https://000029.awsstudygroup.com/4-monitoringwithgrafana/>           |
+| 6   | - **Thực hành:** Tiếp tục cấu hình panel, biểu đồ giám sát và thử nghiệm alert trên Grafana dashboard                                                                       | 19/06/2026   | 19/06/2026      | <https://000029.awsstudygroup.com/4-monitoringwithgrafana/>           |
+| 7   | - Rà soát lại toàn bộ quá trình triển khai <br> - Dọn dẹp tài nguyên (EC2, IAM User/Role, Security Group, VPC) đã tạo trong tuần                                            | 20/06/2026   | 20/06/2026      | <https://000029.awsstudygroup.com/5-cleanup/>                         |
 
 ### Kết quả dự kiến đạt được tuần 6:
 

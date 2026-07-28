@@ -1,126 +1,106 @@
 ---
 title: "Event 1"
-date: 2024-01-01
-weight: 1
+date: 2026-05-30
+weight: 2
 chapter: false
-pre: " <b> 4.1. </b> "
+pre: " <b> 4.2. </b> "
 ---
 
 {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
+⚠️ **Note:** The information below is for reference only. Please **do not copy it verbatim** into your report, including this warning.
 {{% /notice %}}
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Reflection Report: "FCAJ Sharing Day"
 
-### Event Objectives
+### Purpose of the Event
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Provide an opportunity for students and interns to share their learning experiences and real-world project insights.
+- Inspire participants to learn AWS through gamified platforms such as Cloud Quest and Floci.
+- Encourage students to challenge themselves by participating in hackathons.
+- Develop soft skills, including self-confidence and strategies for overcoming procrastination.
+- Introduce a real-world AI project and share lessons learned from the software development lifecycle, particularly DevOps practices.
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Huỳnh Thái Linh** – *Level Up Your AWS Skills with Cloud Quest and Floci*
+- **Huỳnh Anh Khương, Mai Quốc Anh, Nguyễn Trần Minh Quân** – *Hackathon Experience Sharing*
+- **Nguyễn Thị Huỳnh Như** – *Why We Always Need Confidence*
+- **An FPT University alumnus** – *The "Tử Vi Đại Việt" AI Project*
+- **Trần Minh Quân** – *The Hidden Iceberg of a Project: DevOps Before Disaster*
+- **Another guest speaker** – *How to Overcome Procrastination*
 
 ### Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+#### Level Up Your AWS Skills with Cloud Quest and Floci
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+- Introduced Cloud Quest as a free hands-on learning platform that teaches AWS through gamified challenges instead of traditional reading materials.
+- Shared common mistakes made by beginners, such as focusing only on theory without hands-on practice or avoiding creating AWS resources themselves.
+- Emphasized that learning by doing is the most effective way to retain AWS knowledge.
 
-#### Transitioning to modern application architecture – Microservices
+#### Hackathon Experience
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+- Shared the journey of participating in hackathons, from brainstorming ideas and forming teams to working under tight development deadlines.
+- Encouraged participants to embrace challenges and view failures as valuable learning opportunities.
+- Highlighted how hackathons strengthen technical skills, improve teamwork, and enhance resumes when applying for internships or jobs.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+#### Why We Always Need Confidence
 
-#### Domain-Driven Design (DDD)
+- Explained the importance of self-confidence for students, including speaking up, networking, and presenting ideas effectively.
+- Shared personal experiences of overcoming self-doubt.
+- Suggested practical ways to gradually build confidence through repeated practice, such as giving presentations and participating in group activities.
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+#### The "Tử Vi Đại Việt" AI Project
 
-#### Event-Driven Architecture
+- Presented the development of a real-world AI project designed to extract information from traditional Vietnamese astrology books.
+- Discussed data collection, preprocessing, and the challenges of working with unstructured data.
+- Shared the model's accuracy, limitations, and improvements made during the training process.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+#### Overcoming Procrastination
 
-#### Compute Evolution
+- Explained common causes of procrastination, including fear of failure, lack of clear goals, and distractions.
+- Suggested practical solutions such as breaking large tasks into smaller ones, setting deadlines, and eliminating distractions.
+- Shared a personal story about overcoming procrastination and developing better work habits.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+### What I Learned
 
-#### Amazon Q Developer
+#### Technical Knowledge and Learning Strategies
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- Learning a new technology is more effective when theory is combined with hands-on practice using gamified learning platforms such as Cloud Quest.
+- Making mistakes during the learning process should be viewed as a valuable part of learning rather than as failure.
 
-### Key Takeaways
+#### Soft Skills
 
-#### Design Mindset
+- Self-confidence is a skill that can be developed through continuous practice rather than an innate ability.
+- Procrastination can be managed effectively by dividing large goals into smaller tasks and setting realistic deadlines.
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+### Practical Applications
 
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- Explore Cloud Quest to reinforce AWS knowledge through an engaging, hands-on learning experience.
+- Use the "Tử Vi Đại Việt" AI project as inspiration for applying AI to cultural and historical data processing.
+- Apply DevOps principles from the beginning of personal projects instead of addressing operational issues only after problems occur.
+- Improve productivity by breaking tasks into manageable steps and setting deadlines to reduce procrastination.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Attending the sharing session on **May 30, 2026** was a valuable experience because it featured multiple speakers covering a wide range of topics, from cloud technologies to personal development.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+#### Learning from Different Perspectives
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+- Each speaker shared a unique journey, including learning AWS through gamification, participating in hackathons, and developing a real-world AI project from scratch.
+- The diversity of topics provided a broader understanding of both technical knowledge and the mindset required for a professional career.
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+#### Networking and Discussion
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+- The event provided an opportunity to interact directly with current students and alumni, making the discussions more practical, relatable, and easier to apply.
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+#### Key Takeaways
 
-#### Some event photos
-*Add your event photos here*  
+- Effective learning combines theory, hands-on practice, and challenging experiences such as hackathons.
+- Soft skills, including self-confidence and time management, are just as important as technical knowledge.
+- A successful real-world project requires careful planning for both data management and operational processes (DevOps), not just model development.
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+#### Event Photos
+
+![Event](/images/4-EventParticipated/i_event1.png)
+
+> Overall, the event provided not only a wide range of technical knowledge but also valuable insights into the soft skills and professional mindset needed for future study and career development.

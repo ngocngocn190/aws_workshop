@@ -1,6 +1,6 @@
 ---
 title: "Worklog Week 5"
-date: 2026-06-15
+date: 2026-06-08
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
@@ -18,12 +18,12 @@ pre: " <b> 1.5. </b> "
 
 | Day | Tasks | Start Date | Completion Date | Reference |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ------------------------------------------------------------ |
-| 2 | - Learn the fundamentals of AWS CLI and the preparation steps <br> - **Hands-on:** Install AWS CLI and configure profiles and access keys | 15/06/2026 | 15/06/2026 | <https://000011.awsstudygroup.com/1-introduce/> |
-| 3 | - **Hands-on:** View AWS resource information using the CLI <br> - **Hands-on:** Manage Amazon S3, Amazon SNS, and IAM using AWS CLI | 16/06/2026 | 16/06/2026 | <https://000011.awsstudygroup.com/4-infras/> |
-| 4 | - **Hands-on:** Create a VPC and Internet Gateway using AWS CLI <br> - **Hands-on:** Launch an Amazon EC2 instance using AWS CLI <br> - Troubleshoot issues and clean up created resources | 17/06/2026 | 17/06/2026 | <https://000011.awsstudygroup.com/8-network/> |
-| 5 | - Learn the fundamentals of Amazon DynamoDB: <br>&emsp; + Core components <br>&emsp; + Primary Keys and Secondary Indexes <br>&emsp; + Naming rules and data types <br>&emsp; + Read consistency and capacity modes | 18/06/2026 | 18/06/2026 | <https://000060.awsstudygroup.com/1-introduce/> |
-| 6 | - **Hands-on:** Work with DynamoDB using the AWS Management Console <br>&emsp; + Create tables, insert, read, update, and query data <br>&emsp; + Create and query Global Secondary Indexes | 19/06/2026 | 19/06/2026 | <https://000060.awsstudygroup.com/2-prerequiste/> |
-| 7 | - **Hands-on:** Work with DynamoDB using the AWS SDK for Python <br>&emsp; + Create tables, perform CRUD operations, load sample data, and execute query/scan operations <br> - Clean up all resources created during the week | 20/06/2026 | 20/06/2026 | <https://000060.awsstudygroup.com/3-gettingstartedwithawssdk/> |
+| 2 | - Learn the fundamentals of AWS CLI and the preparation steps <br> - **Hands-on:** Install AWS CLI and configure profiles and access keys | 08/06/2026 | 08/06/2026 | <https://000011.awsstudygroup.com/1-introduce/> |
+| 3 | - **Hands-on:** View AWS resource information using the CLI <br> - **Hands-on:** Manage Amazon S3, Amazon SNS, and IAM using AWS CLI | 09/06/2026 | 09/06/2026 | <https://000011.awsstudygroup.com/4-infras/> |
+| 4 | - **Hands-on:** Create a VPC and Internet Gateway using AWS CLI <br> - **Hands-on:** Launch an Amazon EC2 instance using AWS CLI <br> - Troubleshoot issues and clean up created resources | 10/06/2026 | 10/06/2026 | <https://000011.awsstudygroup.com/8-network/> |
+| 5 | - Learn the fundamentals of Amazon DynamoDB: <br>&emsp; + Core components <br>&emsp; + Primary Keys and Secondary Indexes <br>&emsp; + Naming rules and data types <br>&emsp; + Read consistency and capacity modes | 11/06/2026 | 11/06/2026 | <https://000060.awsstudygroup.com/1-introduce/> |
+| 6 | - **Hands-on:** Work with DynamoDB using the AWS Management Console <br>&emsp; + Create tables, insert, read, update, and query data <br>&emsp; + Create and query Global Secondary Indexes | 12/06/2026 | 12/06/2026 | <https://000060.awsstudygroup.com/2-prerequiste/> |
+| 7 | - **Hands-on:** Work with DynamoDB using the AWS SDK for Python <br>&emsp; + Create tables, perform CRUD operations, load sample data, and execute query/scan operations <br> - Clean up all resources created during the week | 13/06/2026 | 13/06/2026 | <https://000060.awsstudygroup.com/3-gettingstartedwithawssdk/> |
 
 ### Expected Outcomes for Week 5:
 

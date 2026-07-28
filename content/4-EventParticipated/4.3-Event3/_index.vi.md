@@ -81,5 +81,5 @@ pre: " <b> 4.3. </b> "
 - Việc lựa chọn giữa tự huấn luyện mô hình (SageMaker) và sử dụng mô hình nền tảng có sẵn (Bedrock) cần dựa trên use-case cụ thể, không nên áp dụng một cách máy móc.
 
 #### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
+![Event](/images/4-EventParticipated/i_event3.png)
 
