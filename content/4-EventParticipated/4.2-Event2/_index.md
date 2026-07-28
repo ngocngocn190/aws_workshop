@@ -1,126 +1,83 @@
 ---
+
 title: "Event 2"
-date: 2024-01-01
-weight: 1
+date: 2026-06-20
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
----
+----------------------
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# Reflection on the "Cloud Architect" Competition
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+### Purpose of the Event
 
-### Event Objectives
+* To create a new and engaging learning environment while maintaining the spirit of knowledge sharing in Cloud Computing.
+* To review fundamental Cloud concepts that participants had already learned and explore more advanced topics related to cloud architecture design.
+* To strengthen teamwork and improve decision-making skills under time pressure through a competitive team-based format.
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+### Organizers & Guest Speakers
 
-### Speakers
+* The organizing team of the **Cloud Architect** competition under the **First Cloud AI Journey (FCAJ)** program.
+* **Nguyen Tuan Thinh** and AWS mentors, who provided additional explanations for several challenging questions during the competition.
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+### Highlights of the Event
 
-### Key Highlights
+#### Competition Rules
 
-#### Identifying the drawbacks of legacy application architecture
+* Two teams competed against each other by answering a series of questions with increasing levels of difficulty.
+* The team with the higher score advanced to the next round. If both teams were tied in the final round, an extra question (Question 11) was used as a tiebreaker, and the faster team won.
+* The questions focused on Cloud Computing knowledge and cloud architecture design.
+* The competition consisted of **8 teams**, each with **5 members**. Participants were allowed to form teams with interns from different groups, provided that each person joined only one team.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+#### Special Skills During the Competition
 
-#### Transitioning to modern application architecture – Microservices
+* **Minimum Risk** (usable once): Designed for uncertain answers. If the answer was incorrect, no points were deducted; if correct, only half of the normal score was awarded.
+* **Star of Hope** (usable once): Used for the team's most confident answer. A correct answer doubled the points, while an incorrect answer resulted in double point deductions.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### Role of the AWS Mentors
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+* After several difficult questions, the AWS mentors, including **Nguyen Tuan Thinh**, provided detailed explanations to help both contestants and the audience better understand the concepts rather than simply knowing the correct answers.
 
-#### Domain-Driven Design (DDD)
+### What I Learned
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+#### Technical Knowledge
 
-#### Event-Driven Architecture
+* Reviewed many fundamental Cloud Computing concepts through a fast-paced quiz format, making the knowledge easier to remember than simply reading documentation.
+* Learned additional advanced concepts related to cloud architecture design that I had not previously explored.
+* Gained a deeper understanding of several Cloud concepts thanks to the AWS mentors' explanations after each round.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+#### Soft Skills
 
-#### Compute Evolution
+* Improved my ability to make quick decisions under time pressure, especially when deciding the best time to use the **Minimum Risk** or **Star of Hope** skills.
+* Strengthened teamwork skills by discussing and agreeing on answers with teammates within a limited amount of time.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+### Application to My Work
 
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
-
-### Key Takeaways
-
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+* Applied the Cloud knowledge reviewed during the competition to both my learning process and my current personal and team projects.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Participating in the **Cloud Architect** competition was both enjoyable and educational. It created an exciting competitive atmosphere while maintaining the learning spirit of the FCAJ program.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+#### A Fun and Collaborative Environment
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+* The team-based format provided an opportunity to interact and collaborate with interns from different groups.
+* The head-to-head competition, round-based scoring system, and special game mechanics created many exciting and memorable moments for both participants and the audience.
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+#### Learning Through Competition
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+* The questions ranged from basic to advanced levels, allowing me to review fundamental Cloud concepts while challenging myself with architecture design scenarios.
+* The AWS mentors' explanations, especially those from **Nguyen Tuan Thinh**, clarified topics that I previously found difficult, turning the competition into a valuable learning experience rather than simply a contest.
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+#### Key Takeaways
 
-#### Some event photos
-*Add your event photos here*  
+* Learning does not always have to be formal or repetitive. A well-designed game-based competition can be an effective and enjoyable way to reinforce knowledge.
+* Teamwork and the ability to make quick decisions are valuable skills that are useful not only during competitions but also in real-world professional environments.
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+#### Photos from the Event
+
+![Event](/images/4-EventParticipated/i_event2_1.png)
+
+![Event](/images/4-EventParticipated/i_event2_2.png)
+
+> Overall, the **Cloud Architect** competition was more than just an entertaining contest. It was an effective opportunity to review Cloud Computing knowledge, develop teamwork and decision-making skills, and strengthen connections among participants while fostering a collaborative learning environment.

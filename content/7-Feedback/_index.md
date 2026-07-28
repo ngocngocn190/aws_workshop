@@ -1,47 +1,52 @@
 ---
-title: "Sharing and Feedback"
-date: 2024-01-01
+
+title: "Feedback and Suggestions"
+date: 2026-07-28
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
----
+--------------------
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+> This section allows you to freely share your personal experiences and suggestions after participating in the **First Cloud AI Journey (FCAJ)** program, helping the FCAJ team improve the program for future participants.
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+## Overall Evaluation
 
-### Overall Evaluation
+**1. Working Environment**
+The working environment was very friendly and open. The FCAJ members were always willing to provide support whenever I encountered difficulties, even outside working hours. The workspace was clean and comfortable, allowing me to stay focused on my tasks.
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+**2. Support from Mentors / Team Administrators**
+The mentors provided detailed guidance and explained concepts clearly whenever I had questions. The team administrators also supported interns with procedures, learning materials, and other resources, making the internship process smooth and convenient.
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+**3. Relevance Between the Internship and My Major**
+Although the learning workload was quite extensive, it gave me an excellent opportunity to broaden my knowledge beyond my major while improving my ability to use new tools through collaboration with students from different academic backgrounds. As a result, I strengthened my foundational knowledge and gained practical experience in areas I had never explored before.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**4. Learning and Skill Development Opportunities**
+During the internship, I learned many new skills, including using project management tools, collaborating effectively in a team, and communicating professionally in a workplace environment. My mentors also shared valuable real-world experiences that helped me better understand my future career path.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+**5. Company Culture and Teamwork**
+The company culture was very positive. Everyone respected one another, worked professionally, and maintained a friendly and supportive atmosphere.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+**6. Internship Policies and Benefits**
+The company provided an internship allowance and offered flexible working hours whenever necessary.
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+## Additional Questions
 
----
+* **What was your favorite part of the internship?**
+  I was most satisfied with the friendly working environment and the flexibility to manage my schedule according to my personal commitments.
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+* **What do you think the company should improve for future interns?**
+  Providing additional hands-on workshops or technical sharing sessions would help interns gain more practical experience.
 
----
+* **Would you recommend this internship to your friends? Why?**
+  Yes. I would recommend it because it provides a comfortable learning environment, supportive mentors, and many opportunities to develop both technical knowledge and soft skills.
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+## Suggestions and Expectations
+
+* **Do you have any suggestions to improve the internship experience?**
+  I hope the program can organize more technical workshops, networking activities, and practical projects to help interns gain more real-world experience.
+
+* **Would you like to continue participating in this program in the future?**
+  Yes. I would be happy to continue participating if given the opportunity.
+
+* **Other comments (optional):**
+  Thank you to the FCAJ team and mentors for creating such a meaningful learning environment. I truly appreciate all the support and guidance throughout the internship.

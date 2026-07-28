@@ -1,13 +1,11 @@
 ---
 title: "Blog 2"
 date: 2026-06-06
-weight: 4
+weight: 2
 chapter: false
-pre: " <b> 3.4. </b> "
+pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+
 
 # AWS SHIELD ADVANCED ATTACK FLOW LOGS FOR DDoS ATTACK MONITORING
 

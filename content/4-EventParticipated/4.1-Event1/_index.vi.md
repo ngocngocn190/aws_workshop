@@ -1,14 +1,11 @@
 ---
 title: "Event 1"
 date: 2026-05-30
-weight: 2
+weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 # Bài thu hoạch buổi chia sẻ kinh nghiệm và kỹ năng "FCAJ Sharing Day"
 

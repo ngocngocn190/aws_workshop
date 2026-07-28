@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The content below is a proposed study plan for reference only. Please **do not copy it verbatim** into your report, including this warning message.
-{{% /notice %}}
+
 
 ### Week 11 Objectives
 

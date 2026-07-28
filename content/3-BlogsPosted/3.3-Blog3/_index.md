@@ -5,9 +5,7 @@ weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+
 
 # REFLECTING ON A MODERN ARCHITECTURE FOR KYC MODERNIZATION USING SERVERLESS & AGENTIC AI ON AWS
 

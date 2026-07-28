@@ -1,115 +1,184 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-06-01
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+This section provides a summary of the workshop content that is **planned** for implementation.
+
+# AI AWS Advisor
+
+## Cloud Operations Copilot – An AI Assistant for Cloud Engineers & DevOps to Automatically Manage, Analyze, and Optimize AWS Infrastructure
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+
+**AI AWS Advisor** is an intelligent AWS infrastructure management platform that acts as a **Cloud Operations Copilot** for Cloud Engineers, DevOps Engineers, Solution Architects, System Administrators, and Technical Managers. Instead of opening multiple AWS Console pages to inspect each service individually, users only need to connect their AWS account once using an **IAM Role ARN** (without storing Access Keys).
+
+The system automatically scans the entire AWS infrastructure every hour. AI analyzes the collected data, generates recommendations and security alerts, and presents them on a centralized dashboard. In addition, users can interact with the AI Copilot using natural language (Vietnamese or English) to ask questions about any aspect of their AWS environment.
+
+---
 
 ### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+#### Current Challenges
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+Organizations using AWS often face challenges such as:
+
+* Not knowing how many Amazon EC2 instances are running but unused.
+* Identifying which Amazon S3 buckets are publicly accessible.
+* Detecting IAM Roles with overly permissive policies (such as **AdministratorAccess**).
+* Finding AWS Lambda functions that are over-provisioned for their actual workloads.
+* Determining which AWS services generate the highest costs.
+* Understanding the current security risks across the AWS environment.
+
+Traditionally, answering these questions requires manually navigating through multiple AWS Console services such as Amazon EC2, Amazon S3, AWS IAM, and Amazon CloudWatch before consolidating the information, a process that typically takes **1–2 hours**.
+
+#### Proposed Solution
+
+AI AWS Advisor automatically collects infrastructure data every hour using **Resource Collector Lambda functions** (EC2, S3, IAM, Lambda, and CloudWatch) triggered by **Amazon EventBridge Scheduler**. The collectors securely access the target AWS account using **AWS STS (`sts:AssumeRole`)** and store the collected data in **Amazon DynamoDB**.
+
+The collected information is then analyzed by **Amazon Bedrock (Claude AI)** to generate insights related to security, cost optimization, and performance. The system automatically classifies risks into **Critical, High, Medium,** and **Low** severity levels. Whenever a **Critical** issue is detected, **Amazon SNS** sends an email notification to the user.
+
+Users can also interact directly with the AI Copilot using natural language to ask questions about their AWS infrastructure. The entire process is completed in **less than 30 seconds**, compared to the **1–2 hours** required for manual inspection.
+
+#### Business Value & Return on Investment (ROI)
+
+* **Time Savings:** Reduces manual infrastructure auditing time by more than **90%**, from several days to just a few minutes.
+* **Cost Optimization:** Identifies approximately **15–35%** of unnecessary monthly AWS spending.
+* **Idle Operating Cost:** Because the platform is built on a **Serverless pay-per-use architecture**, operating costs are almost **USD 0 per month** when there are no incoming requests.
+
+---
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+The platform is built using an **AWS Serverless architecture**, consisting of the following components:
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+* **Frontend:** A React Dashboard communicates with the backend through **HTTPS** using **Amazon API Gateway**.
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+* **Backend:** Amazon API Gateway forwards requests to AWS Lambda functions responsible for business logic, including:
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+  * Projects API
+  * Resources API
+  * AI Analyze API
+
+* **Database:** Data is stored in **Amazon DynamoDB**, which contains four tables:
+
+  * `projects`
+  * `resources`
+  * `insights`
+  * `alerts`
+
+* **Resource Collection:** **Amazon EventBridge Scheduler** triggers the following Resource Collector Lambda functions every hour:
+
+  * `ec2_collector`
+  * `s3_collector`
+  * `iam_collector`
+  * `lambda_collector`
+  * `cloudwatch_collector`
+
+* **Cross-Account Access:** The Collector Lambda functions use **AWS STS AssumeRole** to securely access target AWS accounts and collect information from:
+
+  * Amazon EC2
+  * Amazon S3
+  * AWS IAM
+  * AWS Lambda
+  * Amazon CloudWatch
+  * Amazon RDS
+
+* **AI Analysis:** After data collection, the information is sent to **Amazon Bedrock (Claude)** to analyze the infrastructure and generate actionable insights.
+
+* **Notifications:** Whenever a **Critical** risk is detected, **Amazon SNS** automatically sends email notifications to users.
+
+![Architecture](/images/2-Proposal/architecture.png)
+
+#### AWS Services Used
+
+* **AWS Lambda:** Serverless compute service with automatic scaling and a pay-per-use pricing model.
+* **Amazon API Gateway:** Fully managed API service with native AWS Lambda integration and built-in authentication support.
+* **Amazon DynamoDB:** Serverless NoSQL database offering low latency and a flexible schema suitable for storing data collected from multiple AWS services.
+* **Amazon EventBridge:** AWS-native event scheduler with simple cron expressions and high reliability.
+* **Amazon Bedrock:** Fully managed generative AI service that provides access to foundation models such as Claude without requiring model hosting.
+* **Amazon SNS:** Fully managed messaging service that is simple to integrate with AWS Lambda for notifications.
+* **Amazon CloudWatch:** Native AWS monitoring service that automatically collects metrics and stores logs without requiring additional infrastructure.
+
+---
 
 ### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+#### Implementation Phases
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+**Phase 1 – Security & Architecture Design**
+
+* Configure IAM Cross-Account Trust Policies.
+* Develop Infrastructure as Code (IaC) templates using **AWS SAM CLI**.
+* Design a DynamoDB single-table schema containing `PROJECTS`, `RESOURCES`, `INSIGHTS`, and `ALERTS`.
+
+**Phase 2 – Scanner Development & Amazon Bedrock Integration**
+
+* Develop AWS resource collectors using the **boto3** SDK.
+* Design prompt engineering strategies for **Claude 3** on Amazon Bedrock.
+* Build automated test suites using **Pytest** and **Moto**.
+
+**Phase 3 – Dashboard & AI Chatbot Development**
+
+* Build the frontend using **React 18**, **Vite**, **Tailwind CSS**, and **Recharts**.
+* Integrate the AI Copilot chatbot.
+* Perform end-to-end testing and package the solution for deployment using **AWS CloudFormation**.
+
+
+### 5. Project Roadmap & Milestones
+
+* **Phase 0 – Foundation (Week 1):** Create a sandbox AWS account, set up IAM users for the team, create the GitHub repository, finalize the DynamoDB schema and API contracts, prepare the local development environment, and enable Amazon Bedrock in the AWS Console.
+
+* **Phase 1 – Core Build (Weeks 2–3):** Create DynamoDB tables and IAM Roles for the Resource Collectors; implement EC2, S3, IAM, and Lambda Collectors to store data in DynamoDB; develop the `/projects` and `/resources` APIs; integrate Amazon Bedrock for AI analysis; connect the frontend to the backend APIs and display real data.
+
+* **Phase 2 – Integration (Weeks 3–4):** Configure Amazon EventBridge to trigger the Resource Collectors every hour; automatically analyze collected data using AI after each scan; send Critical risk notifications via Amazon SNS; implement the AI chat endpoint; display AI-generated insights on the frontend; complete an end-to-end demonstration.
+
+* **Phase 3 – Documentation & Finalization (Weeks 4–5):** Complete the bilingual (English/Vietnamese) workshop guide, capture all required screenshots, prepare the cleanup guide, write individual reflections, and conduct the final review based on the evaluation rubric.
+
+---
 
 ### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+The estimated costs can be viewed using the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).
 
-Total: $0.7/month, $8.40/12 months
+Alternatively, download the [budget estimation document](../attachments/budget_estimation.pdf).
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+#### Infrastructure Cost
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+Estimated monthly infrastructure cost for **10 customer projects**, each scanning **1,000 AWS resources per day**:
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+| AWS Service                         | Usage                                                | Estimated Monthly Cost |
+| :---------------------------------- | :--------------------------------------------------- | ---------------------: |
+| **AWS Lambda**                      | 100,000 requests, 512 MB memory                      |      $0.00 (Free Tier) |
+| **Amazon API Gateway**              | 50,000 REST API requests                             |                  $0.05 |
+| **Amazon DynamoDB**                 | On-Demand (2 GB storage, 500,000 reads/writes)       |                  $0.25 |
+| **Amazon Bedrock**                  | Claude 3 Haiku (1M input tokens, 200k output tokens) |                  $1.20 |
+| **Amazon EventBridge & Amazon SNS** | 720 scheduled triggers/month, 100 emails             |                  $0.01 |
+| **Total Estimated Monthly Cost**    | **Serverless Pay-As-You-Go**                         |       **~$1.51/month** |
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+**Estimated Annual Infrastructure Cost:** **~$18.12/year**
+
+---
+
+### 7. Risk Assessment & Mitigation Strategies
+
+| Identified Risk                                        | Severity | Likelihood | Mitigation Strategy                                                                                                                                                                     |
+| :----------------------------------------------------- | :------- | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Amazon Bedrock API rate limits**                     | Medium   | Low        | Implement an **exponential backoff retry mechanism** and cache analysis results in Amazon DynamoDB to reduce API requests.                                                              |
+| **Customer revokes IAM Role permissions**              | High     | Medium     | Catch `ClientError` exceptions during `sts:AssumeRole` calls and automatically update the project status to **Disconnected**.                                                           |
+| **LLM generates inaccurate responses (Hallucination)** | High     | Low        | Require the model to return responses following a predefined **JSON schema**, and use a **regex-based fallback parser** in Python to validate and recover improperly formatted outputs. |
+| **AWS spending exceeds the budget**                    | Medium   | Low        | Configure **AWS Budgets** to send alerts when monthly costs reach **USD 5**, and limit the execution frequency of scheduled tasks (cron jobs).                                          |
+
+---
 
 ### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+
+1. **Automated Infrastructure Auditing:** Develop an AI-powered system capable of automatically inspecting and evaluating AWS resources every hour, significantly reducing reliance on manual infrastructure reviews.
+
+2. **Enhanced Security:** Minimize the risk of credential exposure by using **temporary session tokens** through the **AWS STS `AssumeRole`** mechanism instead of long-lived access keys.
+
+3. **A Reusable Enterprise Blueprint:** Deliver a reference architecture that can be reused for developing **B2B SaaS** applications based on the **AWS Serverless** architecture.

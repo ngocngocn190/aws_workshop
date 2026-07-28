@@ -6,9 +6,7 @@ weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The content below is a proposed plan for reference only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+
 
 ### Objectives for Week 6:
 

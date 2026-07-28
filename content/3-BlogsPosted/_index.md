@@ -3,12 +3,10 @@ title: "Published Blogs"
 date: 2026-07-20
 weight: 3
 chapter: false
-pre: " <b> 3. </b> "
+pre: " <b> 3.3 </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+
 
 This section lists and briefly introduces the blogs that have been published on the [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). The following are examples:
 

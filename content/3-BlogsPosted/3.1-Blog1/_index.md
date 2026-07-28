@@ -1,13 +1,11 @@
 ---
 title: "Blog 1"
 date: 2026-06-05
-weight: 2
+weight: 1
 chapter: false
-pre: " <b> 3.2. </b> "
+pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+
 
 # LEARNING ABOUT AI TRAFFIC ANALYSIS DASHBOARDS IN AWS WAF
 

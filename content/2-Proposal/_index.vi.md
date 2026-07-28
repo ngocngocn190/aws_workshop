@@ -5,9 +5,7 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
 
@@ -22,7 +20,7 @@ AI AWS Advisor là nền tảng quản trị hạ tầng AWS thông minh, hoạt
 Doanh nghiệp dùng AWS thường gặp các vấn đề như: không biết có bao nhiêu EC2 đang chạy mà không ai dùng, S3 bucket nào đang bị public ra internet, IAM Role nào có quyền quá rộng (AdministratorAccess), Lambda nào cấu hình dư thừa so với nhu cầu thực tế, dịch vụ nào đang tốn chi phí nhiều nhất, và hệ thống đang có những rủi ro bảo mật nào. Để trả lời những câu hỏi này theo cách truyền thống, người dùng phải mở lần lượt EC2, S3, IAM, CloudWatch trên AWS Console rồi tổng hợp thủ công, mất khoảng 1-2 giờ.
 
 *Giải pháp*  
-AI AWS Advisor tự động thu thập dữ liệu qua các Resource Collector Lambda (EC2, S3, IAM, Lambda, CloudWatch) mỗi giờ thông qua EventBridge Scheduler, sử dụng AssumeRole để truy cập tài khoản AWS mục tiêu một cách an toàn, lưu dữ liệu vào DynamoDB. Amazon Bedrock (Claude AI) sau đó phân tích dữ liệu và sinh ra insight về bảo mật, chi phí và hiệu năng; hệ thống tự động phân loại rủi ro theo mức độ (Critical/High/Medium/Low) và gửi cảnh báo qua Amazon SNS khi phát hiện rủi ro Critical. Người dùng cũng có thể trò chuyện trực tiếp với AI Copilot để hỏi đáp về hạ tầng. Toàn bộ quy trình được giải quyết trong dưới 30 giây, thay vì 1-2 giờ theo cách thủ công. 
+AI AWS Advisor tự động thu thập dữ liệu qua các Resource Collector Lambda (EC2, S3, IAM, Lambda, CloudWatch) mỗi giờ thông qua EventBridge Scheduler, sử dụng dịch vụ AWS STS (sts:AssumeRole)  để truy cập tài khoản AWS mục tiêu một cách an toàn, lưu dữ liệu vào DynamoDB. Amazon Bedrock (Claude AI) sau đó phân tích dữ liệu và sinh ra insight về bảo mật, chi phí và hiệu năng; hệ thống tự động phân loại rủi ro theo mức độ (Critical/High/Medium/Low) và gửi cảnh báo qua Amazon SNS khi phát hiện rủi ro Critical. Người dùng cũng có thể trò chuyện trực tiếp với AI Copilot để hỏi đáp về hạ tầng. Toàn bộ quy trình được giải quyết trong dưới 30 giây, thay vì 1-2 giờ theo cách thủ công. 
 
 
 
@@ -33,11 +31,42 @@ AI AWS Advisor tự động thu thập dữ liệu qua các Resource Collector L
 
 
 ### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless. React Dashboard (frontend) giao tiếp qua HTTPS với Amazon API Gateway, API Gateway gọi các Lambda xử lý nghiệp vụ (Projects API, Resources API, AI Analyze API), dữ liệu được lưu trong DynamoDB (4 bảng: projects, resources, insights, alerts). Amazon EventBridge Scheduler kích hoạt các Resource Collector Lambda (ec2_collector, s3_collector, iam_collector, lambda_collector, cloudwatch_collector) mỗi giờ; các Lambda này dùng AssumeRole để truy cập tài khoản AWS mục tiêu và thu thập dữ liệu từ EC2, S3, IAM, Lambda, CloudWatch, RDS. Amazon Bedrock (Claude) nhận dữ liệu, phân tích và trả về insight; Amazon SNS gửi email khi phát hiện cảnh báo Critical.
+Nền tảng được xây dựng theo kiến trúc **AWS Serverless**, bao gồm các thành phần chính sau:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+* **Frontend:** React Dashboard giao tiếp với hệ thống thông qua **HTTPS** đến **Amazon API Gateway**.
+* **Backend:** Amazon API Gateway chuyển tiếp yêu cầu đến các **AWS Lambda** để xử lý nghiệp vụ, bao gồm:
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+  * Projects API
+  * Resources API
+  * AI Analyze API
+* **Cơ sở dữ liệu:** Dữ liệu được lưu trữ trong **Amazon DynamoDB** với 4 bảng:
+
+  * `projects`
+  * `resources`
+  * `insights`
+  * `alerts`
+* **Thu thập dữ liệu tài nguyên:** **Amazon EventBridge Scheduler** kích hoạt các **Resource Collector Lambda** theo chu kỳ mỗi giờ, gồm:
+
+  * `ec2_collector`
+  * `s3_collector`
+  * `iam_collector`
+  * `lambda_collector`
+  * `cloudwatch_collector`
+* **Truy cập tài khoản AWS:** Các Collector Lambda sử dụng **AWS STS AssumeRole** để truy cập tài khoản AWS mục tiêu và thu thập thông tin từ các dịch vụ:
+
+  * Amazon EC2
+  * Amazon S3
+  * AWS IAM
+  * AWS Lambda
+  * Amazon CloudWatch
+  * Amazon RDS
+* **Phân tích bằng AI:** Dữ liệu sau khi thu thập được gửi đến **Amazon Bedrock (Claude)** để phân tích và sinh ra các **insights**.
+* **Thông báo:** Khi phát hiện cảnh báo ở mức **Critical**, hệ thống sử dụng **Amazon SNS** để gửi email thông báo đến người dùng.
+
+
+![Architecture](/images/2-Proposal/architecture.png)
+
+
 
 *Dịch vụ AWS sử dụng*  
 - *AWS Lambda*: Serverless, không cần quản lý server, tự scale, pay-per-use.
@@ -50,7 +79,7 @@ Nền tảng áp dụng kiến trúc AWS Serverless. React Dashboard (frontend) 
 
  
 
-### 4. Triển khai kỹ thuật  CHƯA LÀM LẠI
+### 4. Triển khai kỹ thuật  
 *Các giai đoạn triển khai*  
 #### Các Giai đoạn Thực hiện
 1. **Giai đoạn 1: Bảo mật & Thiết kế Kiến trúc:** Thiết lập Trust Policy IAM Cross-Account, cấu hình template IaC với AWS SAM CLI và thiết kế Single-Table schema DynamoDB (`PROJECTS`, `RESOURCES`, `INSIGHTS`, `ALERTS`).
